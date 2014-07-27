@@ -26,8 +26,10 @@ def pp(obj):
   print pp_str(obj)
 
 def pp_str(obj):
+  indent = None
+  # indent = 4
   orig = json.dumps(obj, 
-               indent=4, 
+               indent=indent, 
                sort_keys=True, 
                skipkeys=True, 
                cls=MyEncoder)
